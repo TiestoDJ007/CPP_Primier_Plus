@@ -1,0 +1,21 @@
+//
+// Created by a on 2019/6/10.
+//
+#include <iostream>
+
+int stonetolb(int);
+
+int main() {
+    using namespace std;
+    int stone;
+    cout << "Enter the weight in stone: ";
+    cin >> stone;
+    int pounds = stonetolb(stone);
+    cout << stone << " stone = ";
+    cout << pounds << " pounds. " << endl;
+    return 0;
+}
+
+int stonetolb(int sts) {
+    return 14 * sts;
+}
