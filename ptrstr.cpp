@@ -1,0 +1,29 @@
+//
+// Created by a on 2019/7/23.
+//
+#include <iostream>
+#include <cstring>
+
+int main() {
+    using namespace std;
+    char animal[10] = "bear";
+    const char *bird = "wren";
+    char *ps;
+    cout << animal << " and ";
+    cout << bird << "\n";
+    cout << "Enter a kind of animal: ";
+    cin >> animal;
+    ps = animal;
+    cout << ps << "!\n";
+    cout << "Before using strcpy():\n";
+    cout << animal << " at " << (int *) animal << endl;
+    cout << ps << " at " << (int *) ps << endl;
+    ps = new char[strlen(animal) + 1];
+    strcpy(ps, animal);
+    cout << "After using strcpy():\n";
+    cout << animal << " at " << (int *) animal << endl;
+    cout << ps << " at " << (int *) ps << endl;
+    delete[] ps;
+    return 0;
+}
+
