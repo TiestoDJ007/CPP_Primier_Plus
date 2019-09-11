@@ -28,7 +28,7 @@ protected:
     void Restore(Formatting &f) const;
 
 public:
-    AcctABC(const std::string &s = "Nullbody", long= -1, double bal = 0.0);
+    AcctABC(const std::string &s = "Nullbody", long an = -1, double bal = 0.0);
 
     void Deposit(double amt);
 
